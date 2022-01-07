@@ -17,7 +17,8 @@ if __name__ == "__main__":
     parser.add_argument('-l', '--linenos', default=False, action='store_true',
                         help='Add line numbers to the output.')
     parser.add_argument('-o', '--verboptions', default="xleftmargin=-40mm", action='store', metavar="OPTIONS",
-                        help='Any extra options (comma separated) to the fancyVrb latex package for the Verbatim environment.')
+                        help='Any extra options (comma separated) to the fancyVrb latex package for the Verbatim '
+                             'environment.')
     args = parser.parse_args()
 
     py_file_glob = "*.py"
