@@ -36,6 +36,7 @@ if __name__ == "__main__":
                                      LatexFormatter(full=True, verboptions=args.verboptions, linenos=args.linenos))
         except IOError:
             logger.error("Failed to read file %s", path)
+            continue
         proc = sp.run(['pdflatex', f'--jobname={path.stem}', '--'],
                       input=code_tex.encode(), timeout=15, cwd=path.parent,
                       stdout=sp.PIPE, stderr=sp.PIPE)
